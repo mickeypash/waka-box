@@ -1,5 +1,9 @@
 name: Update gist with WakaTime stats
 on:
+  pull_request_review:
+    types: [submitted]
+    branches: ['master']
+    paths: ['**path/**']
   schedule:
     - cron: "0 0 * * *"
 jobs:
